@@ -1,0 +1,4 @@
+{	
+	"COMPOSER_VENDOR_DIR": "{BUILD_DIR}/{WEBDIR}/vendor",
+    "PHP_EXTENSIONS": ["redis", "mbstring"]
+}
