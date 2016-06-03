@@ -4,15 +4,16 @@
 $config = array(
   'servers' => array(
     array(
-      'name'   => 'local server', // Optional name.
-      'host'   => '127.0.0.1',
-      'port'   => 6379,
+      'name'   => $_ENV['REDIS_NAME'], // Optional name.
+      'host'   => $_ENV['REDIS_ADDRESS'],
+      'port'   => $_ENV['REDIS_PORT'],
+      'databases' => $_ENV['REDIS_DATABASE'],
       'filter' => '*',
       'scheme' => 'tcp', // Optional. Connection scheme. 'tcp' - for TCP connection, 'unix' - for connection by unix domain socket
-      'path'   => '' // Optional. Path to unix domain socket. Uses only if 'scheme' => 'unix'. Example: '/var/run/redis/redis.sock'
+      'path'   => '', // Optional. Path to unix domain socket. Uses only if 'scheme' => 'unix'. Example: '/var/run/redis/redis.sock'
 
       // Optional Redis authentication.
-      //'auth' => 'redispasswordhere' // Warning: The password is sent in plain-text to the Redis server.
+      'auth' => $_ENV['REDIS_PASSWORD'] // Warning: The password is sent in plain-text to the Redis server.
     ),
 
     /*array(
