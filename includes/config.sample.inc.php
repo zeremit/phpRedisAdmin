@@ -1,21 +1,9 @@
 <?php
 //Copy this file to config.inc.php and make changes to that file to customize your configuration.
-
+$configs = Spyc::YAMLLoadString($_ENV['REDIS_CONFIG']);
 $config = array(
-  'servers' => array(
-    array(
-      'name'   => $_ENV['REDIS_NAME'], // Optional name.
-      'host'   => $_ENV['REDIS_ADDRESS'],
-      'port'   => $_ENV['REDIS_PORT'],
-      'databases' => $_ENV['REDIS_DATABASE'],
-      'filter' => '*',
-      'scheme' => 'tcp', // Optional. Connection scheme. 'tcp' - for TCP connection, 'unix' - for connection by unix domain socket
-      'path'   => '', // Optional. Path to unix domain socket. Uses only if 'scheme' => 'unix'. Example: '/var/run/redis/redis.sock'
-
-      // Optional Redis authentication.
-      'auth' => $_ENV['REDIS_PASSWORD'] // Warning: The password is sent in plain-text to the Redis server.
-    ),
-
+  'servers' => $configs,
+// array(
     /*array(
       'host' => 'localhost',
       'port' => 6380
@@ -34,7 +22,7 @@ $config = array(
       'keys'      => false,         // Use the old KEYS command instead of SCAN to fetch all keys for this server (default uses config default).
       'scansize'  => 1000           // How many entries to fetch using each SCAN command for this server (default uses config default).
     ),*/
-  ),
+//  ),
 
 
   'seperator' => ':',
