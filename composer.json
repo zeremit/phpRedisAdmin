@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "predis/predis": "1.0.3"
+        "predis/predis": "1.0.3",
+        "mustangostang/spyc": "0.5.1"
     },
     "minimum-stability": "stable",
     "target-dir": "ErikDubbelboer/phpRedisAdmin"    
