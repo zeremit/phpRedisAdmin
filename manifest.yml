@@ -15,7 +15,7 @@ applications:
             auth: password
             db: 1 # Optional database number, see http://redis.io/commands/select
             databases: 16 # number of databases (prevents use of CONFIG command)
-            filter: something:* # Show only parts of database for speed or security reasons.
+            filter: * # Show only parts of database for speed or security reasons.
             seperator: / # Use a different seperator on this database (default uses config default).
             flush: false # Set to true to enable the flushdb button for this instance.
             charset: cp1251 # Keys and values are stored in redis using this encoding (default utf-8).
