@@ -8,15 +8,14 @@ applications:
             port: 6379
             databases: 16 # number of databases (prevents use of CONFIG command)
             auth: password
-          - name: Cluster 2
-            host: 127.0.0.1
-            port: 6379
-            databases: 16
-            auth: password
-            db: 1 # Optional database number, see http://redis.io/commands/select
-            databases: 16 # number of databases (prevents use of CONFIG command)
-            filter: * # Show only parts of database for speed or security reasons.
-            seperator: / # Use a different seperator on this database (default uses config default).
-            flush: false # Set to true to enable the flushdb button for this instance.
-            charset: cp1251 # Keys and values are stored in redis using this encoding (default utf-8).
-            scansize: 1000 # How many entries to fetch using each SCAN command for this server (default uses config default).
+          - name: Cluster 2 #(required)
+            host: 127.0.0.1 #(required)
+            port: 6379 #(required)
+            auth: password #(required)
+            db: 1 #(optional) database number, see http://redis.io/commands/select
+            databases: 16 #(optional) number of databases (prevents use of CONFIG command)
+            filter: * #(optional) Show only parts of database for speed or security reasons.
+            seperator: / #(optional) Use a different seperator on this database (default uses config default).
+            flush: false #(optional) Set to true to enable the flushdb button for this instance.
+            charset: cp1251 #(optional) Keys and values are stored in redis using this encoding (default utf-8).
+            scansize: 1000 #(optiona How many entries to fetch using each SCAN command for this server (default uses config default).
