@@ -12,6 +12,7 @@ applications:
             host: 127.0.0.1 #(required)
             port: 6379 #(required)
             auth: password #(required)
+            databases: 16 #(required)
             db: 1 #(optional) database number, see http://redis.io/commands/select
             databases: 16 #(optional) number of databases (prevents use of CONFIG command)
             filter: * #(optional) Show only parts of database for speed or security reasons.
