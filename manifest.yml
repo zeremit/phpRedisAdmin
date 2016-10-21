@@ -18,4 +18,4 @@ applications:
             seperator: / #(optional) Use a different seperator on this database (default uses config default).
             flush: false #(optional) Set to true to enable the flushdb button for this instance.
             charset: cp1251 #(optional) Keys and values are stored in redis using this encoding (default utf-8).
-            scansize: 1000 #(optiona How many entries to fetch using each SCAN command for this server (default uses config default).
+            scansize: 1000 #(optional) How many entries to fetch using each SCAN command for this server (default uses config default).
